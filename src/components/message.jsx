@@ -9,12 +9,12 @@ function strToRGB(str) {
   const c = (hash & 0x00FFFFFF)
     .toString(16)
     .toUpperCase();
-  return `#${'00000'.subString(0, 6 - c.length)}${c}`;
+  return `#${"00000".substring(0, 6 - c.length)}${c}`;
 }
 
 const Message = (props) => {
-  const { created_at, author, content } = props.messages;
-  const time = new Date(created_at).toLocalTimeString();
+  const { created_at, author, content } = props.message;
+  const time = new Date(created_at).toLocaleTimeString();
   return (
     <div className="message-container">
       <i className="author">
